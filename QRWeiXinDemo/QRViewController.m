@@ -74,6 +74,19 @@
     [pop setTitle:@"返回" forState:UIControlStateNormal];
     [pop addTarget:self action:@selector(pop:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:pop];
+    
+    //修正扫描区域
+    CGFloat screenHeight = self.view.frame.size.height;
+    CGFloat screenWidth = self.view.frame.size.width;
+    CGRect cropRect = CGRectMake((screenWidth - qrRectView.transparentArea.width) / 2,
+                                 (screenHeight - qrRectView.transparentArea.height) / 2,
+                                 qrRectView.transparentArea.width,
+                                 qrRectView.transparentArea.height);
+
+    [_output setRectOfInterest:CGRectMake(cropRect.origin.y / screenHeight,
+                                          cropRect.origin.x / screenWidth,
+                                          cropRect.size.height / screenHeight,
+                                          cropRect.size.width / screenWidth)];
 
 }
 
