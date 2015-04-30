@@ -8,16 +8,21 @@
 
 #import "QRView.h"
 
+
+static NSTimeInterval kQrLineanimateDuration = 0.02;
+
 @implementation QRView {
 
         UIImageView *qrLine;
         CGFloat qrLineY;
+        QRMenu *qrMenu;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     
     self = [super initWithFrame:frame];
     if (self) {
+        
         
         
     }
@@ -35,6 +40,10 @@
         NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:kQrLineanimateDuration target:self selector:@selector(show) userInfo:nil repeats:YES];
         [timer fire];
     }
+    
+    if (!qrMenu) {
+        [self initQrMenu];
+    }
 }
 
 - (void)initQRLine {
@@ -45,8 +54,27 @@
     qrLine.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:qrLine];
     qrLineY = qrLine.frame.origin.y;
+}
+
+- (void)initQrMenu {
     
+    CGFloat height = 100;
+    CGFloat width = self.bounds.size.width;
+    qrMenu = [[QRMenu alloc] initWithFrame:CGRectMake(0, self.bounds.size.height - height, width, height)];
+    qrMenu.backgroundColor = [UIColor grayColor];
+    [self addSubview:qrMenu];
     
+    __weak typeof(self)weakSelf = self;
+
+    qrMenu.didSelectedBlock = ^(QRItem *item){
+        
+        NSLog(@"点击的是%u",item.type);
+        
+        if ([weakSelf.delegate respondsToSelector:@selector(scanTypeConfig:)] ) {
+            
+            [weakSelf.delegate scanTypeConfig:item];
+        }
+    };
 }
 
 - (void)show {

@@ -10,7 +10,7 @@
 
 #import <AVFoundation/AVFoundation.h>
 #import "QRView.h"
-@interface QRViewController ()<AVCaptureMetadataOutputObjectsDelegate>
+@interface QRViewController ()<AVCaptureMetadataOutputObjectsDelegate,QRViewDelegate>
 
 @property (strong, nonatomic) AVCaptureDevice * device;
 @property (strong, nonatomic) AVCaptureDeviceInput * input;
@@ -51,6 +51,12 @@
     // 条码类型 AVMetadataObjectTypeQRCode
     _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
     
+    //增加条形码扫描
+//    _output.metadataObjectTypes = @[AVMetadataObjectTypeEAN13Code,
+//                                    AVMetadataObjectTypeEAN8Code,
+//                                    AVMetadataObjectTypeCode128Code,
+//                                    AVMetadataObjectTypeQRCode];
+    
     // Preview
     _preview =[AVCaptureVideoPreviewLayer layerWithSession:_session];
     _preview.videoGravity =AVLayerVideoGravityResize;
@@ -67,6 +73,7 @@
     qrRectView.transparentArea = CGSizeMake(200, 200);
     qrRectView.backgroundColor = [UIColor clearColor];
     qrRectView.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
+    qrRectView.delegate = self;
     [self.view addSubview:qrRectView];
     
     UIButton *pop = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -95,6 +102,21 @@
     
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+#pragma mark QRViewDelegate
+-(void)scanTypeConfig:(QRItem *)item {
+    
+    if (item.type == QRItemTypeQRCode) {
+        _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
+        
+    } else if (item.type == QRItemTypeOther) {
+        
+        _output.metadataObjectTypes = @[AVMetadataObjectTypeEAN13Code,
+                                        AVMetadataObjectTypeEAN8Code,
+                                        AVMetadataObjectTypeCode128Code,
+                                        AVMetadataObjectTypeQRCode];
+    }
+}
 #pragma mark AVCaptureMetadataOutputObjectsDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
@@ -112,6 +134,7 @@
     if (self.qrUrlBlock) {
         self.qrUrlBlock(stringValue);
     }
+    
     [self pop:nil];
     
     

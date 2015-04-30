@@ -17,6 +17,8 @@
 		70834D621AEB703C00570AD1 /* QRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70834D611AEB703C00570AD1 /* QRView.m */; };
 		70834D651AEB70CA00570AD1 /* qr_scan_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70834D641AEB70CA00570AD1 /* qr_scan_line@2x.png */; };
 		70834D681AEB716200570AD1 /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70834D671AEB716200570AD1 /* QRViewController.m */; };
+		70C542671AF1B9F1002B2C46 /* QRMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C542661AF1B9F1002B2C46 /* QRMenu.m */; };
+		70C5426A1AF1BA3A002B2C46 /* QRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C542691AF1BA3A002B2C46 /* QRItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		70834D641AEB70CA00570AD1 /* qr_scan_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_scan_line@2x.png"; sourceTree = "<group>"; };
 		70834D661AEB716100570AD1 /* QRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
 		70834D671AEB716200570AD1 /* QRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
+		70C542651AF1B9F1002B2C46 /* QRMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRMenu.h; sourceTree = "<group>"; };
+		70C542661AF1B9F1002B2C46 /* QRMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRMenu.m; sourceTree = "<group>"; };
+		70C542681AF1BA3A002B2C46 /* QRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRItem.h; sourceTree = "<group>"; };
+		70C542691AF1BA3A002B2C46 /* QRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,10 @@
 			children = (
 				70834D601AEB703C00570AD1 /* QRView.h */,
 				70834D611AEB703C00570AD1 /* QRView.m */,
+				70C542651AF1B9F1002B2C46 /* QRMenu.h */,
+				70C542661AF1B9F1002B2C46 /* QRMenu.m */,
+				70C542681AF1BA3A002B2C46 /* QRItem.h */,
+				70C542691AF1BA3A002B2C46 /* QRItem.m */,
 			);
 			path = QRView;
 			sourceTree = SOURCE_ROOT;
@@ -249,7 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C5426A1AF1BA3A002B2C46 /* QRItem.m in Sources */,
 				70834D421AEB6FAF00570AD1 /* ViewController.m in Sources */,
+				70C542671AF1B9F1002B2C46 /* QRMenu.m in Sources */,
 				70834D621AEB703C00570AD1 /* QRView.m in Sources */,
 				70834D681AEB716200570AD1 /* QRViewController.m in Sources */,
 				70834D3F1AEB6FAF00570AD1 /* AppDelegate.m in Sources */,
@@ -446,6 +458,7 @@
 				70834D5B1AEB6FB000570AD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70834D5C1AEB6FB000570AD1 /* Build configuration list for PBXNativeTarget "QRWeiXinDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +467,7 @@
 				70834D5E1AEB6FB000570AD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

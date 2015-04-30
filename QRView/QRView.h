@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QRMenu.h"
 
-static NSTimeInterval kQrLineanimateDuration = 0.02;
+@protocol QRViewDelegate <NSObject>
 
+-(void)scanTypeConfig:(QRItem *)item;
+
+@end
 @interface QRView : UIView
 
 
+@property (nonatomic, weak) id<QRViewDelegate> delegate;
 /**
  *  透明的区域
  */
