@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7Pw-WJ-FAY" kind="push" id="4Jb-rc-SPy"/>
+                                    <action selector="openQR:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7fp-0t-KEL"/>
                                 </connections>
                             </button>
                         </subviews>
