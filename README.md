@@ -15,3 +15,6 @@
 ## 效果
 
 ![qrview](http://iosddimage.qiniudn.com/QRView.PNG)
+
+##License
+MIT
