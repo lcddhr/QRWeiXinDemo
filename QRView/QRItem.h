@@ -10,7 +10,7 @@
 
 
 typedef NS_ENUM(NSUInteger, QRItemType) {
-    QRItemTypeQRCode,
+    QRItemTypeQRCode = 0,
     QRItemTypeOther,
 };
 
