@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "QRMenu.h"
 
+
 @protocol QRViewDelegate <NSObject>
 
 -(void)scanTypeConfig:(QRItem *)item;

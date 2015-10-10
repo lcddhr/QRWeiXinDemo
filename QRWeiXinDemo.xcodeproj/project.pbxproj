@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		707EEEE11BC7E4EA00D0BAC0 /* QRUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 707EEEE01BC7E4EA00D0BAC0 /* QRUtil.m */; };
 		70834D3C1AEB6FAF00570AD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70834D3B1AEB6FAF00570AD1 /* main.m */; };
 		70834D3F1AEB6FAF00570AD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70834D3E1AEB6FAF00570AD1 /* AppDelegate.m */; };
 		70834D421AEB6FAF00570AD1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70834D411AEB6FAF00570AD1 /* ViewController.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		707EEEDF1BC7E4EA00D0BAC0 /* QRUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRUtil.h; sourceTree = "<group>"; };
+		707EEEE01BC7E4EA00D0BAC0 /* QRUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRUtil.m; sourceTree = "<group>"; };
 		70834D361AEB6FAF00570AD1 /* QRWeiXinDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRWeiXinDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70834D3A1AEB6FAF00570AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70834D3B1AEB6FAF00570AD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				70834D411AEB6FAF00570AD1 /* ViewController.m */,
 				70834D661AEB716100570AD1 /* QRViewController.h */,
 				70834D671AEB716200570AD1 /* QRViewController.m */,
+				707EEEDF1BC7E4EA00D0BAC0 /* QRUtil.h */,
+				707EEEE01BC7E4EA00D0BAC0 /* QRUtil.m */,
 				70834D431AEB6FAF00570AD1 /* Main.storyboard */,
 				70834D461AEB6FAF00570AD1 /* Images.xcassets */,
 				70834D481AEB6FAF00570AD1 /* LaunchScreen.xib */,
@@ -207,6 +212,7 @@
 				TargetAttributes = {
 					70834D351AEB6FAF00570AD1 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = DK9MPZYTDE;
 					};
 					70834D4E1AEB6FB000570AD1 = {
 						CreatedOnToolsVersion = 6.1;
@@ -263,6 +269,7 @@
 				70834D421AEB6FAF00570AD1 /* ViewController.m in Sources */,
 				70C542671AF1B9F1002B2C46 /* QRMenu.m in Sources */,
 				70834D621AEB703C00570AD1 /* QRView.m in Sources */,
+				707EEEE11BC7E4EA00D0BAC0 /* QRUtil.m in Sources */,
 				70834D681AEB716200570AD1 /* QRViewController.m in Sources */,
 				70834D3F1AEB6FAF00570AD1 /* AppDelegate.m in Sources */,
 				70834D3C1AEB6FAF00570AD1 /* main.m in Sources */,
@@ -387,10 +394,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QRWeiXinDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -398,10 +408,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QRWeiXinDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

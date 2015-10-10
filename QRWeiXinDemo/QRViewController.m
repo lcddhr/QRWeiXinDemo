@@ -10,6 +10,7 @@
 
 #import <AVFoundation/AVFoundation.h>
 #import "QRView.h"
+#import "QRUtil.h"
 @interface QRViewController ()<AVCaptureMetadataOutputObjectsDelegate,QRViewDelegate>
 
 @property (strong, nonatomic) AVCaptureDevice * device;
@@ -48,31 +49,35 @@
         [_session addOutput:self.output];
     }
     
+    AVCaptureConnection *outputConnection = [_output connectionWithMediaType:AVMediaTypeVideo];
+    outputConnection.videoOrientation = [QRUtil videoOrientationFromCurrentDeviceOrientation];
+    
+    
     // 条码类型 AVMetadataObjectTypeQRCode
     _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
     
     //增加条形码扫描
-//    _output.metadataObjectTypes = @[AVMetadataObjectTypeEAN13Code,
-//                                    AVMetadataObjectTypeEAN8Code,
-//                                    AVMetadataObjectTypeCode128Code,
-//                                    AVMetadataObjectTypeQRCode];
+    //    _output.metadataObjectTypes = @[AVMetadataObjectTypeEAN13Code,
+    //                                    AVMetadataObjectTypeEAN8Code,
+    //                                    AVMetadataObjectTypeCode128Code,
+    //                                    AVMetadataObjectTypeQRCode];
     
     // Preview
     _preview =[AVCaptureVideoPreviewLayer layerWithSession:_session];
     _preview.videoGravity =AVLayerVideoGravityResize;
-    _preview.frame =self.view.layer.bounds;
+    _preview.frame =[QRUtil screenBounds];
     [self.view.layer insertSublayer:_preview atIndex:0];
     
-    
+    _preview.connection.videoOrientation = [QRUtil videoOrientationFromCurrentDeviceOrientation];
     
     [_session startRunning];
     
     
-    CGRect screenRect = [UIScreen mainScreen].bounds;
+    CGRect screenRect = [QRUtil screenBounds];
     QRView *qrRectView = [[QRView alloc] initWithFrame:screenRect];
     qrRectView.transparentArea = CGSizeMake(200, 200);
     qrRectView.backgroundColor = [UIColor clearColor];
-    qrRectView.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
+    qrRectView.center = CGPointMake([QRUtil screenBounds].size.width / 2, [QRUtil screenBounds].size.height / 2);
     qrRectView.delegate = self;
     [self.view addSubview:qrRectView];
     
@@ -89,12 +94,12 @@
                                  (screenHeight - qrRectView.transparentArea.height) / 2,
                                  qrRectView.transparentArea.width,
                                  qrRectView.transparentArea.height);
-
+    
     [_output setRectOfInterest:CGRectMake(cropRect.origin.y / screenHeight,
                                           cropRect.origin.x / screenWidth,
                                           cropRect.size.height / screenHeight,
                                           cropRect.size.width / screenWidth)];
-
+    
 }
 
 - (void)pop:(UIButton *)button {
@@ -102,6 +107,8 @@
     
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
 
 #pragma mark QRViewDelegate
 -(void)scanTypeConfig:(QRItem *)item {
@@ -146,14 +153,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+//- (CGRect)screenBounds {
+//    
+//    UIScreen *screen = [UIScreen mainScreen];
+//    CGRect screenRect;
+//    if (![screen respondsToSelector:@selector(fixedCoordinateSpace)] && UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)) {
+//        //        screenRect = CGRectMake(screen.bounds.origin.x, screen.bounds.origin.y, screen.bounds.size.height, screen.bounds.size.width);
+//        //        screenRect = screen.bounds;
+//        screenRect = CGRectMake(0, 0, screen.bounds.size.height, screen.bounds.size.width);
+//    } else {
+//        screenRect = screen.bounds;
+//    }
+//    
+//    return screenRect;
+//    
+//}
 
 @end

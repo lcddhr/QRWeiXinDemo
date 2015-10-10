@@ -7,7 +7,7 @@
 //
 
 #import "QRView.h"
-
+#import "QRUtil.h"
 
 static NSTimeInterval kQrLineanimateDuration = 0.02;
 
@@ -49,7 +49,8 @@ static NSTimeInterval kQrLineanimateDuration = 0.02;
 - (void)initQRLine {
     
     
-    qrLine  = [[UIImageView alloc] initWithFrame:CGRectMake(self.bounds.size.width / 2 - self.transparentArea.width / 2, self.bounds.size.height / 2 - self.transparentArea.height / 2, self.transparentArea.width, 2)];
+    CGRect screenBounds = [QRUtil screenBounds];
+    qrLine  = [[UIImageView alloc] initWithFrame:CGRectMake(screenBounds.size.width / 2 - self.transparentArea.width / 2, screenBounds.size.height / 2 - self.transparentArea.height / 2, self.transparentArea.width, 2)];
     qrLine.image = [UIImage imageNamed:@"qr_scan_line"];
     qrLine.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:qrLine];
@@ -59,8 +60,8 @@ static NSTimeInterval kQrLineanimateDuration = 0.02;
 - (void)initQrMenu {
     
     CGFloat height = 100;
-    CGFloat width = self.bounds.size.width;
-    qrMenu = [[QRMenu alloc] initWithFrame:CGRectMake(0, self.bounds.size.height - height, width, height)];
+    CGFloat width = [QRUtil screenBounds].size.width;
+    qrMenu = [[QRMenu alloc] initWithFrame:CGRectMake(0, [QRUtil screenBounds].size.height - height, width, height)];
     qrMenu.backgroundColor = [UIColor grayColor];
     [self addSubview:qrMenu];
     
@@ -99,7 +100,7 @@ static NSTimeInterval kQrLineanimateDuration = 0.02;
 - (void)drawRect:(CGRect)rect {
     
     //整个二维码扫描界面的颜色
-    CGSize screenSize =[UIScreen mainScreen].bounds.size;
+    CGSize screenSize =[QRUtil screenBounds].size;
     CGRect screenDrawRect =CGRectMake(0, 0, screenSize.width,screenSize.height);
     
     //中间清空的矩形框
