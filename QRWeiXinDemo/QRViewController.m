@@ -7,7 +7,6 @@
 //
 
 #import "QRViewController.h"
-
 #import <AVFoundation/AVFoundation.h>
 #import "QRView.h"
 #import "QRUtil.h"
@@ -19,13 +18,25 @@
 @property (strong, nonatomic) AVCaptureSession * session;
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer * preview;
 
+@property (nonatomic, strong) UIButton *backBtn;
+
+@property (nonatomic, strong) QRView *qrView;
 @end
 
 @implementation QRViewController
 
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self defaultConfig];       //初始化配置,主要是二维码的配置
+    [self configUI];
+    [self updateLayout];
+}
+
+
+
+- (void)defaultConfig {
     
     _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
@@ -56,12 +67,6 @@
     // 条码类型 AVMetadataObjectTypeQRCode
     _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
     
-    //增加条形码扫描
-    //    _output.metadataObjectTypes = @[AVMetadataObjectTypeEAN13Code,
-    //                                    AVMetadataObjectTypeEAN8Code,
-    //                                    AVMetadataObjectTypeCode128Code,
-    //                                    AVMetadataObjectTypeQRCode];
-    
     // Preview
     _preview =[AVCaptureVideoPreviewLayer layerWithSession:_session];
     _preview.videoGravity =AVLayerVideoGravityResize;
@@ -71,35 +76,33 @@
     _preview.connection.videoOrientation = [QRUtil videoOrientationFromCurrentDeviceOrientation];
     
     [_session startRunning];
+}
+
+- (void)configUI {
+    
+    [self.view addSubview:self.qrView];
+    [self.view addSubview:self.backBtn];
+ 
+}
+
+- (void)updateLayout {
     
     
-    CGRect screenRect = [QRUtil screenBounds];
-    QRView *qrRectView = [[QRView alloc] initWithFrame:screenRect];
-    qrRectView.transparentArea = CGSizeMake(200, 200);
-    qrRectView.backgroundColor = [UIColor clearColor];
-    qrRectView.center = CGPointMake([QRUtil screenBounds].size.width / 2, [QRUtil screenBounds].size.height / 2);
-    qrRectView.delegate = self;
-    [self.view addSubview:qrRectView];
     
-    UIButton *pop = [UIButton buttonWithType:UIButtonTypeCustom];
-    pop.frame = CGRectMake(20, 20, 50, 50);
-    [pop setTitle:@"返回" forState:UIControlStateNormal];
-    [pop addTarget:self action:@selector(pop:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:pop];
+    _qrView.center = CGPointMake([QRUtil screenBounds].size.width / 2, [QRUtil screenBounds].size.height / 2);
     
     //修正扫描区域
     CGFloat screenHeight = self.view.frame.size.height;
     CGFloat screenWidth = self.view.frame.size.width;
-    CGRect cropRect = CGRectMake((screenWidth - qrRectView.transparentArea.width) / 2,
-                                 (screenHeight - qrRectView.transparentArea.height) / 2,
-                                 qrRectView.transparentArea.width,
-                                 qrRectView.transparentArea.height);
+    CGRect cropRect = CGRectMake((screenWidth - self.qrView.transparentArea.width) / 2,
+                                 (screenHeight - self.qrView.transparentArea.height) / 2,
+                                 self.qrView.transparentArea.width,
+                                 self.qrView.transparentArea.height);
     
     [_output setRectOfInterest:CGRectMake(cropRect.origin.y / screenHeight,
                                           cropRect.origin.x / screenWidth,
                                           cropRect.size.height / screenHeight,
                                           cropRect.size.width / screenWidth)];
-    
 }
 
 - (void)pop:(UIButton *)button {
@@ -143,30 +146,36 @@
     }
     
     [self pop:nil];
-    
-    
-    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - Getter and Setter
+-(UIButton *)backBtn {
+    
+    if (!_backBtn) {
+        
+        _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+         _backBtn.frame = CGRectMake(20, 20, 50, 50);
+        [_backBtn setTitle:@"返回" forState:UIControlStateNormal];
+        [_backBtn addTarget:self action:@selector(pop:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _backBtn;
 }
 
-//- (CGRect)screenBounds {
-//    
-//    UIScreen *screen = [UIScreen mainScreen];
-//    CGRect screenRect;
-//    if (![screen respondsToSelector:@selector(fixedCoordinateSpace)] && UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)) {
-//        //        screenRect = CGRectMake(screen.bounds.origin.x, screen.bounds.origin.y, screen.bounds.size.height, screen.bounds.size.width);
-//        //        screenRect = screen.bounds;
-//        screenRect = CGRectMake(0, 0, screen.bounds.size.height, screen.bounds.size.width);
-//    } else {
-//        screenRect = screen.bounds;
-//    }
-//    
-//    return screenRect;
-//    
-//}
+
+-(QRView *)qrView {
+    
+    if (!_qrView) {
+        
+        CGRect screenRect = [QRUtil screenBounds];
+        _qrView = [[QRView alloc] initWithFrame:screenRect];
+        _qrView.transparentArea = CGSizeMake(200, 200);
+
+        _qrView.backgroundColor = [UIColor clearColor];
+        _qrView.delegate = self;
+    }
+    return _qrView;
+}
+
 
 @end

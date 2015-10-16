@@ -12,7 +12,7 @@
 
 @protocol QRViewDelegate <NSObject>
 
--(void)scanTypeConfig:(QRItem *)item;
+- (void)scanTypeConfig:(QRItem *)item;
 
 @end
 @interface QRView : UIView
