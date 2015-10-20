@@ -78,6 +78,23 @@
     [_session startRunning];
 }
 
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    if (![_session isRunning]) {
+        
+        [self defaultConfig];
+    }
+   
+}
+- (void)viewWillDisappear:(BOOL)animated {
+
+    [super viewWillDisappear:animated];
+    [_preview removeFromSuperlayer];
+    [_session stopRunning];
+}
+
 - (void)configUI {
     
     [self.view addSubview:self.qrView];
@@ -145,7 +162,9 @@
         self.qrUrlBlock(stringValue);
     }
     
-    [self pop:nil];
+//    [self pop:nil];
+    UIViewController *view = [UIViewController new];
+    [self.navigationController pushViewController:view animated:YES];
 }
 
 
