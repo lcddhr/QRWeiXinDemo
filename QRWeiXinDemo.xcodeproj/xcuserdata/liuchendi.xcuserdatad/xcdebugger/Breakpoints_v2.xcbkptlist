@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QRWeiXinDemo/QRViewController.m"
-            timestampString = "466160280.393705"
+            timestampString = "467033345.940211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "-scanTypeConfig:"
             landmarkType = "5">
          </BreakpointContent>
