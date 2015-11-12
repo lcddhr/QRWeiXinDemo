@@ -63,7 +63,6 @@
     AVCaptureConnection *outputConnection = [_output connectionWithMediaType:AVMediaTypeVideo];
     outputConnection.videoOrientation = [QRUtil videoOrientationFromCurrentDeviceOrientation];
     
-    
     // 条码类型 AVMetadataObjectTypeQRCode
     _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
     
@@ -124,7 +123,6 @@
 
 - (void)pop:(UIButton *)button {
     
-    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -162,9 +160,7 @@
         self.qrUrlBlock(stringValue);
     }
     
-//    [self pop:nil];
-    UIViewController *view = [UIViewController new];
-    [self.navigationController pushViewController:view animated:YES];
+    [self pop:nil];
 }
 
 
@@ -172,7 +168,6 @@
 -(UIButton *)backBtn {
     
     if (!_backBtn) {
-        
         _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
          _backBtn.frame = CGRectMake(20, 20, 50, 50);
         [_backBtn setTitle:@"返回" forState:UIControlStateNormal];
