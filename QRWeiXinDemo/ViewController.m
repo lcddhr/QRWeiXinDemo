@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "QRViewController.h"
+#import "PhotoQRViewController.h"
 
 @interface ViewController ()
 
@@ -33,6 +34,17 @@
         [alertView show];
     }
 }
+- (IBAction)readPhotoQR:(id)sender {
+    
+    if ([[UIDevice currentDevice].systemVersion floatValue] < 8.0) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"这个功能必须8.0系统之后才能使用" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertView show];
+        return;
+    }
+    
+    [self showPhotoQRViewController];
+}
 
 - (BOOL)validateCamera {
     
@@ -44,6 +56,12 @@
     
     QRViewController *qrVC = [[QRViewController alloc] init];
     [self.navigationController pushViewController:qrVC animated:YES];
+}
+
+- (void)showPhotoQRViewController {
+    
+    PhotoQRViewController *photoQR = [[PhotoQRViewController alloc] init];
+    [self.navigationController pushViewController:photoQR animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -19,6 +19,8 @@
 
 *	1.0.6 push一个界面再返回，界面卡住问题
 
+*	1.0.7 增加二维码图片的读取	
+
 ## 效果
 
 ![qrview](http://iosddimage.qiniudn.com/QRView.PNG)

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sJM-RK-bGo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sJM-RK-bGo">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,7 +18,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdn-o0-ZzK">
-                                <rect key="frame" x="195" y="250" width="64" height="30"/>
+                                <rect key="frame" x="268" y="136" width="64" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="4xD-SV-Eop"/>
+                                </constraints>
                                 <state key="normal" title="Open QR">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -26,11 +30,26 @@
                                     <action selector="openQR:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7fp-0t-KEL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbR-S7-2AJ">
+                                <rect key="frame" x="236" y="236" width="137" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="T4y-qo-d01"/>
+                                    <constraint firstAttribute="height" constant="30" id="n7D-rc-wwg"/>
+                                </constraints>
+                                <state key="normal" title="Read Photo QR"/>
+                                <connections>
+                                    <action selector="readPhotoQR:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="B9F-nU-xoI"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="xdn-o0-ZzK" secondAttribute="centerX" constant="73" id="SbD-3Z-upB"/>
-                            <constraint firstAttribute="centerY" secondItem="xdn-o0-ZzK" secondAttribute="centerY" constant="35" id="uU4-Mc-fta"/>
+                            <constraint firstItem="xdn-o0-ZzK" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="72" id="BoZ-YI-OjL"/>
+                            <constraint firstItem="KbR-S7-2AJ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" constant="4.5" id="PDY-Vz-hAe"/>
+                            <constraint firstItem="KbR-S7-2AJ" firstAttribute="top" secondItem="xdn-o0-ZzK" secondAttribute="bottom" constant="70" id="pS7-8W-gzG"/>
+                            <constraint firstItem="xdn-o0-ZzK" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="wRA-zP-TZj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2OE-fM-b8d"/>
@@ -50,6 +69,7 @@
                     <view key="view" contentMode="scaleToFill" id="66u-1V-t9b">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="mEj-Fo-Y11"/>
@@ -66,6 +86,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h06-BJ-mMf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
