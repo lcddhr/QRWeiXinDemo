@@ -33,4 +33,4 @@ MIT
 
 微信公众号：
 
-![](http://7i7ht3.com1.z0.glb.clouddn.com/二维码_12.jpg)
+![](http://7i7ht3.com1.z0.glb.clouddn.com/QRCode.jpg)
