@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "QRViewController.h"
 #import "PhotoQRViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
 
@@ -24,7 +25,7 @@
 }
 - (IBAction)openQR:(id)sender {
     
-    if ([self validateCamera]) {
+    if ([self validateCamera] && [self canUseCamera]) {
         
         [self showQRViewController];
         
@@ -46,15 +47,32 @@
     [self showPhotoQRViewController];
 }
 
-- (BOOL)validateCamera {
+-(BOOL)canUseCamera {
     
-  return [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] &&
-         [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear];
+    NSString *mediaType = AVMediaTypeVideo;
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
+    if(authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied){
+        
+        NSLog(@"相机权限受限");
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请在设备的设置-隐私-相机中允许访问相机。" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertView show];
+        return NO;
+    }
+    
+    return YES;
 }
+
+-(BOOL)validateCamera {
+    
+    return [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] &&
+    [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear];
+}
+
 
 - (void)showQRViewController {
     
-    QRViewController *qrVC = [[QRViewController alloc] init];
+     QRViewController *qrVC = [[QRViewController alloc] init];
     [self.navigationController pushViewController:qrVC animated:YES];
 }
 

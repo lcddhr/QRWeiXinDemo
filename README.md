@@ -21,6 +21,8 @@
 
 *	1.0.7 增加二维码图片的读取	
 
+* 1.0.8 修正相机权限
+
 ## 效果
 
 ![qrview](http://iosddimage.qiniudn.com/QRView.PNG)

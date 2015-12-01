@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 typedef void(^QRUrlBlock)(NSString *url);
+
 @interface QRViewController : UIViewController
 
 
 @property (nonatomic, copy) QRUrlBlock qrUrlBlock;
+
 
 @end
