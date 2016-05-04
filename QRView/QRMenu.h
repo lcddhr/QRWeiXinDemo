@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "QRItem.h"
 
-
 typedef void(^QRMenuDidSelectedBlock)(QRItem *item);
 
 @interface QRMenu : UIView

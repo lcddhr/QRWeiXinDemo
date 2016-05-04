@@ -21,6 +21,10 @@
 @property (nonatomic, strong) UIButton *backBtn;
 
 @property (nonatomic, strong) QRView *qrView;
+
+@property (nonatomic, copy) ScanCompleteBlock scanCompleteBlock;
+
+@property (nonatomic, copy, readwrite) NSString *urlString;
 @end
 
 @implementation QRViewController
@@ -37,44 +41,7 @@
 
 
 - (void)defaultConfig {
-    
-    _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    
-    // Input
-    _input = [AVCaptureDeviceInput deviceInputWithDevice:self.device error:nil];
-    
-    // Output
-    _output = [[AVCaptureMetadataOutput alloc]init];
-    [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-    
-    // Session
-    _session = [[AVCaptureSession alloc]init];
-    [_session setSessionPreset:AVCaptureSessionPresetHigh];
-    if ([_session canAddInput:self.input])
-    {
-        [_session addInput:self.input];
-    }
-    
-    if ([_session canAddOutput:self.output])
-    {
-        [_session addOutput:self.output];
-    }
-    
-    AVCaptureConnection *outputConnection = [_output connectionWithMediaType:AVMediaTypeVideo];
-    outputConnection.videoOrientation = [QRUtil videoOrientationFromCurrentDeviceOrientation];
-    
-    // 条码类型 AVMetadataObjectTypeQRCode
-    _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
-    
-    // Preview
-    _preview =[AVCaptureVideoPreviewLayer layerWithSession:_session];
-    _preview.videoGravity =AVLayerVideoGravityResize;
-    _preview.frame =[QRUtil screenBounds];
-    [self.view.layer insertSublayer:_preview atIndex:0];
-    
-    _preview.connection.videoOrientation = [QRUtil videoOrientationFromCurrentDeviceOrientation];
-    
-    [_session startRunning];
+    [self startRunning];
 }
 
 
@@ -83,15 +50,14 @@
     [super viewWillAppear:animated];
     if (![_session isRunning]) {
         
-        [self defaultConfig];
+        [self startRunning];
     }
    
 }
 - (void)viewWillDisappear:(BOOL)animated {
 
     [super viewWillDisappear:animated];
-    [_preview removeFromSuperlayer];
-    [_session stopRunning];
+    [self stopRunning];
 }
 
 - (void)configUI {
@@ -126,7 +92,65 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark - Public Method
+-(instancetype)initWithScanCompleteHandler:(ScanCompleteBlock)scanCompleteBlock {
+    
+    self = [super init];
+    if (self) {
+        _scanCompleteBlock = scanCompleteBlock;
+    }
+    return self;
+}
 
+- (void)startRunning {
+    
+    
+    _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
+    // Input
+    _input = [AVCaptureDeviceInput deviceInputWithDevice:self.device error:nil];
+    
+    // Output
+    _output = [[AVCaptureMetadataOutput alloc]init];
+    [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+    
+    // Session
+    _session = [[AVCaptureSession alloc]init];
+    [_session setSessionPreset:AVCaptureSessionPresetHigh];
+    if ([_session canAddInput:self.input])
+    {
+        [_session addInput:self.input];
+    }
+    
+    if ([_session canAddOutput:self.output])
+    {
+        [_session addOutput:self.output];
+    }
+    
+    AVCaptureConnection *outputConnection = [_output connectionWithMediaType:AVMediaTypeVideo];
+    outputConnection.videoOrientation = [QRUtil videoOrientationFromCurrentDeviceOrientation];
+    
+    
+    // 条码类型 AVMetadataObjectTypeQRCode
+    _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
+    
+    // Preview
+    _preview =[AVCaptureVideoPreviewLayer layerWithSession:_session];
+    _preview.videoGravity =AVLayerVideoGravityResize;
+    _preview.frame =[QRUtil screenBounds];
+    [self.view.layer insertSublayer:_preview atIndex:0];
+    
+    _preview.connection.videoOrientation = [QRUtil videoOrientationFromCurrentDeviceOrientation];
+    
+    [_session startRunning];
+}
+
+- (void)stopRunning {
+   
+    [_preview removeFromSuperlayer];
+    [_session stopRunning];
+    
+}
 
 #pragma mark QRViewDelegate
 -(void)scanTypeConfig:(QRItem *)item {
@@ -145,7 +169,7 @@
 #pragma mark AVCaptureMetadataOutputObjectsDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
-    NSString *stringValue;
+    NSString *stringValue = @"";
     if ([metadataObjects count] >0)
     {
         //停止扫描
@@ -154,13 +178,13 @@
         stringValue = metadataObject.stringValue;
     }
     
-    NSLog(@" %@",stringValue);
+    self.urlString = stringValue;
     
-    if (self.qrUrlBlock) {
-        self.qrUrlBlock(stringValue);
+    NSLog(@" 扫描后的url是:%@",stringValue);
+    
+    if (self.scanCompleteBlock) {
+        self.scanCompleteBlock(stringValue);
     }
-    
-    [self pop:nil];
 }
 
 
