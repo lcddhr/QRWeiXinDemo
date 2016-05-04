@@ -11,6 +11,7 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *urlLabel;
 
 @end
 
@@ -42,7 +43,10 @@
 
 - (void)showQRViewController {
     
-    QRViewController *qrVC = [[QRViewController alloc] init];
+//    QRViewController *qrVC = [[QRViewController alloc] init];
+    QRViewController *qrVC = [[QRViewController alloc] initWithScanCompleteHandler:^(NSString *url) {
+        self.urlLabel.text = [NSString stringWithFormat:@"扫描后的url是:%@",url];
+    }];
     [self.navigationController pushViewController:qrVC animated:YES];
 }
 

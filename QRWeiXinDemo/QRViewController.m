@@ -21,6 +21,10 @@
 @property (nonatomic, strong) UIButton *backBtn;
 
 @property (nonatomic, strong) QRView *qrView;
+
+@property (nonatomic, copy) ScanCompleteBlock scanCompleteBlock;
+
+@property (nonatomic, copy, readwrite) NSString *urlString;
 @end
 
 @implementation QRViewController
@@ -37,6 +41,71 @@
 
 
 - (void)defaultConfig {
+    
+    [self startRunning];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    if (![_session isRunning]) {
+        
+        [self startRunning];
+    }
+   
+}
+- (void)viewWillDisappear:(BOOL)animated {
+
+    [super viewWillDisappear:animated];
+    [self stopRunning];
+}
+
+- (void)configUI {
+    
+    [self.view addSubview:self.qrView];
+    [self.view addSubview:self.backBtn];
+ 
+}
+
+- (void)updateLayout {
+    
+    
+    
+    _qrView.center = CGPointMake([QRUtil screenBounds].size.width / 2, [QRUtil screenBounds].size.height / 2);
+    
+    //修正扫描区域
+    CGFloat screenHeight = self.view.frame.size.height;
+    CGFloat screenWidth = self.view.frame.size.width;
+    CGRect cropRect = CGRectMake((screenWidth - self.qrView.transparentArea.width) / 2,
+                                 (screenHeight - self.qrView.transparentArea.height) / 2,
+                                 self.qrView.transparentArea.width,
+                                 self.qrView.transparentArea.height);
+    
+    [_output setRectOfInterest:CGRectMake(cropRect.origin.y / screenHeight,
+                                          cropRect.origin.x / screenWidth,
+                                          cropRect.size.height / screenHeight,
+                                          cropRect.size.width / screenWidth)];
+}
+
+- (void)pop:(UIButton *)button {
+    
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - Public Method
+-(instancetype)initWithScanCompleteHandler:(ScanCompleteBlock)scanCompleteBlock {
+    
+    self = [super init];
+    if (self) {
+        _scanCompleteBlock = scanCompleteBlock;
+    }
+    return self;
+}
+
+- (void)startRunning {
+    
     
     _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
@@ -78,57 +147,12 @@
     [_session startRunning];
 }
 
-
-- (void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
-    if (![_session isRunning]) {
-        
-        [self defaultConfig];
-    }
+- (void)stopRunning {
    
-}
-- (void)viewWillDisappear:(BOOL)animated {
-
-    [super viewWillDisappear:animated];
     [_preview removeFromSuperlayer];
     [_session stopRunning];
+    
 }
-
-- (void)configUI {
-    
-    [self.view addSubview:self.qrView];
-    [self.view addSubview:self.backBtn];
- 
-}
-
-- (void)updateLayout {
-    
-    
-    
-    _qrView.center = CGPointMake([QRUtil screenBounds].size.width / 2, [QRUtil screenBounds].size.height / 2);
-    
-    //修正扫描区域
-    CGFloat screenHeight = self.view.frame.size.height;
-    CGFloat screenWidth = self.view.frame.size.width;
-    CGRect cropRect = CGRectMake((screenWidth - self.qrView.transparentArea.width) / 2,
-                                 (screenHeight - self.qrView.transparentArea.height) / 2,
-                                 self.qrView.transparentArea.width,
-                                 self.qrView.transparentArea.height);
-    
-    [_output setRectOfInterest:CGRectMake(cropRect.origin.y / screenHeight,
-                                          cropRect.origin.x / screenWidth,
-                                          cropRect.size.height / screenHeight,
-                                          cropRect.size.width / screenWidth)];
-}
-
-- (void)pop:(UIButton *)button {
-    
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-
 
 #pragma mark QRViewDelegate
 -(void)scanTypeConfig:(QRItem *)item {
@@ -147,7 +171,7 @@
 #pragma mark AVCaptureMetadataOutputObjectsDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
-    NSString *stringValue;
+    NSString *stringValue = @"";
     if ([metadataObjects count] >0)
     {
         //停止扫描
@@ -156,15 +180,13 @@
         stringValue = metadataObject.stringValue;
     }
     
-    NSLog(@" %@",stringValue);
+    self.urlString = stringValue;
     
-    if (self.qrUrlBlock) {
-        self.qrUrlBlock(stringValue);
+    NSLog(@" 扫描后的url是:%@",stringValue);
+    
+    if (self.scanCompleteBlock) {
+        self.scanCompleteBlock(stringValue);
     }
-    
-//    [self pop:nil];
-    UIViewController *view = [UIViewController new];
-    [self.navigationController pushViewController:view animated:YES];
 }
 
 

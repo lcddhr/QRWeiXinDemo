@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^QRUrlBlock)(NSString *url);
+typedef void(^ScanCompleteBlock)(NSString *url);
+
 @interface QRViewController : UIViewController
 
+@property (nonatomic, copy, readonly) NSString *urlString;
 
-@property (nonatomic, copy) QRUrlBlock qrUrlBlock;
+- (instancetype)initWithScanCompleteHandler:(ScanCompleteBlock)scanCompleteBlock;
 
+- (void)stopRunning;
 @end
