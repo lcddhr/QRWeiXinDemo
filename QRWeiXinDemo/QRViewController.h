@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+<<<<<<< HEAD
 typedef void(^ScanCompleteBlock)(NSString *url);
+=======
+typedef void(^QRUrlBlock)(NSString *url);
+>>>>>>> master
 
 @interface QRViewController : UIViewController
 
@@ -16,5 +20,9 @@ typedef void(^ScanCompleteBlock)(NSString *url);
 
 - (instancetype)initWithScanCompleteHandler:(ScanCompleteBlock)scanCompleteBlock;
 
+<<<<<<< HEAD
 - (void)stopRunning;
+=======
+
+>>>>>>> master
 @end

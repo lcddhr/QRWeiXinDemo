@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		702381541BF593C800D54906 /* PhotoQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 702381531BF593C800D54906 /* PhotoQRViewController.m */; };
+		702381561BF594D800D54906 /* QRCode@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 702381551BF594D800D54906 /* QRCode@2x.jpg */; };
 		707EEEE11BC7E4EA00D0BAC0 /* QRUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 707EEEE01BC7E4EA00D0BAC0 /* QRUtil.m */; };
 		70834D3C1AEB6FAF00570AD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70834D3B1AEB6FAF00570AD1 /* main.m */; };
 		70834D3F1AEB6FAF00570AD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70834D3E1AEB6FAF00570AD1 /* AppDelegate.m */; };
@@ -33,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		702381521BF593C800D54906 /* PhotoQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoQRViewController.h; sourceTree = "<group>"; };
+		702381531BF593C800D54906 /* PhotoQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoQRViewController.m; sourceTree = "<group>"; };
+		702381551BF594D800D54906 /* QRCode@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "QRCode@2x.jpg"; sourceTree = "<group>"; };
 		707EEEDF1BC7E4EA00D0BAC0 /* QRUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRUtil.h; sourceTree = "<group>"; };
 		707EEEE01BC7E4EA00D0BAC0 /* QRUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRUtil.m; sourceTree = "<group>"; };
 		70834D361AEB6FAF00570AD1 /* QRWeiXinDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRWeiXinDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +111,8 @@
 				70834D411AEB6FAF00570AD1 /* ViewController.m */,
 				70834D661AEB716100570AD1 /* QRViewController.h */,
 				70834D671AEB716200570AD1 /* QRViewController.m */,
+				702381521BF593C800D54906 /* PhotoQRViewController.h */,
+				702381531BF593C800D54906 /* PhotoQRViewController.m */,
 				707EEEDF1BC7E4EA00D0BAC0 /* QRUtil.h */,
 				707EEEE01BC7E4EA00D0BAC0 /* QRUtil.m */,
 				70834D431AEB6FAF00570AD1 /* Main.storyboard */,
@@ -158,6 +165,7 @@
 		70834D631AEB70BC00570AD1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				702381551BF594D800D54906 /* QRCode@2x.jpg */,
 				70834D641AEB70CA00570AD1 /* qr_scan_line@2x.png */,
 			);
 			path = Resource;
@@ -212,7 +220,6 @@
 				TargetAttributes = {
 					70834D351AEB6FAF00570AD1 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = DK9MPZYTDE;
 					};
 					70834D4E1AEB6FB000570AD1 = {
 						CreatedOnToolsVersion = 6.1;
@@ -247,6 +254,7 @@
 				70834D451AEB6FAF00570AD1 /* Main.storyboard in Resources */,
 				70834D4A1AEB6FAF00570AD1 /* LaunchScreen.xib in Resources */,
 				70834D651AEB70CA00570AD1 /* qr_scan_line@2x.png in Resources */,
+				702381561BF594D800D54906 /* QRCode@2x.jpg in Resources */,
 				70834D471AEB6FAF00570AD1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +281,7 @@
 				70834D681AEB716200570AD1 /* QRViewController.m in Sources */,
 				70834D3F1AEB6FAF00570AD1 /* AppDelegate.m in Sources */,
 				70834D3C1AEB6FAF00570AD1 /* main.m in Sources */,
+				702381541BF593C800D54906 /* PhotoQRViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

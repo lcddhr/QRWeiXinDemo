@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QRWeiXinDemo/QRViewController.m"
-            timestampString = "467033345.940211"
+            filePath = "QRWeiXinDemo/ViewController.m"
+            timestampString = "470628577.349654"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "-scanTypeConfig:"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-canUseCamera"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -42,7 +42,47 @@
 
 - (void)defaultConfig {
     
+<<<<<<< HEAD
     [self startRunning];
+=======
+    _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
+    // Input
+    _input = [AVCaptureDeviceInput deviceInputWithDevice:self.device error:nil];
+    
+    // Output
+    _output = [[AVCaptureMetadataOutput alloc]init];
+    [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+    
+    // Session
+    _session = [[AVCaptureSession alloc]init];
+    [_session setSessionPreset:AVCaptureSessionPresetHigh];
+    if ([_session canAddInput:self.input])
+    {
+        [_session addInput:self.input];
+    }
+    
+    if ([_session canAddOutput:self.output])
+    {
+        [_session addOutput:self.output];
+    }
+    
+    AVCaptureConnection *outputConnection = [_output connectionWithMediaType:AVMediaTypeVideo];
+    outputConnection.videoOrientation = [QRUtil videoOrientationFromCurrentDeviceOrientation];
+    
+    // 条码类型 AVMetadataObjectTypeQRCode
+    _output.metadataObjectTypes =@[AVMetadataObjectTypeQRCode];
+    
+    // Preview
+    _preview =[AVCaptureVideoPreviewLayer layerWithSession:_session];
+    _preview.videoGravity =AVLayerVideoGravityResize;
+    _preview.frame =[QRUtil screenBounds];
+    [self.view.layer insertSublayer:_preview atIndex:0];
+    
+    _preview.connection.videoOrientation = [QRUtil videoOrientationFromCurrentDeviceOrientation];
+    
+    [_session startRunning];
+>>>>>>> master
 }
 
 
@@ -89,7 +129,6 @@
 }
 
 - (void)pop:(UIButton *)button {
-    
     
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -184,9 +223,13 @@
     
     NSLog(@" 扫描后的url是:%@",stringValue);
     
+<<<<<<< HEAD
     if (self.scanCompleteBlock) {
         self.scanCompleteBlock(stringValue);
     }
+=======
+    [self pop:nil];
+>>>>>>> master
 }
 
 
@@ -194,7 +237,6 @@
 -(UIButton *)backBtn {
     
     if (!_backBtn) {
-        
         _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
          _backBtn.frame = CGRectMake(20, 20, 50, 50);
         [_backBtn setTitle:@"返回" forState:UIControlStateNormal];
@@ -217,6 +259,8 @@
     }
     return _qrView;
 }
+
+
 
 
 @end
