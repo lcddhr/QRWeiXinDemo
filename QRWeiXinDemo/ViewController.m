@@ -73,14 +73,10 @@
 
 - (void)showQRViewController {
     
-<<<<<<< HEAD
-//    QRViewController *qrVC = [[QRViewController alloc] init];
     QRViewController *qrVC = [[QRViewController alloc] initWithScanCompleteHandler:^(NSString *url) {
         self.urlLabel.text = [NSString stringWithFormat:@"扫描后的url是:%@",url];
     }];
-=======
-     QRViewController *qrVC = [[QRViewController alloc] init];
->>>>>>> master
+
     [self.navigationController pushViewController:qrVC animated:YES];
 }
 
