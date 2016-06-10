@@ -24,6 +24,15 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		642C9DF71D0B0E6B00241CF4 /* DDQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9DF61D0B0E6B00241CF4 /* DDQRCodeViewController.m */; };
 		642C9DFB1D0B0E9400241CF4 /* DDPhotoQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9DFA1D0B0E9400241CF4 /* DDPhotoQRCodeViewController.m */; };
+		642C9E1D1D0B175000241CF4 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 642C9E121D0B175000241CF4 /* .gitkeep */; };
+		642C9E1E1D0B175000241CF4 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 642C9E141D0B175000241CF4 /* .gitkeep */; };
+		642C9E1F1D0B175000241CF4 /* QRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9E161D0B175000241CF4 /* QRItem.m */; };
+		642C9E201D0B175000241CF4 /* QRMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9E181D0B175000241CF4 /* QRMenu.m */; };
+		642C9E211D0B175000241CF4 /* QRUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9E1A1D0B175000241CF4 /* QRUtil.m */; };
+		642C9E221D0B175000241CF4 /* QRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9E1C1D0B175000241CF4 /* QRView.m */; };
+		642C9E271D0B17DD00241CF4 /* qr_scan_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 642C9E241D0B17DD00241CF4 /* qr_scan_line@2x.png */; };
+		642C9E281D0B17DD00241CF4 /* QRCode@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 642C9E251D0B17DD00241CF4 /* QRCode@2x.jpg */; };
+		642C9E291D0B17DD00241CF4 /* QRView.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 642C9E261D0B17DD00241CF4 /* QRView.PNG */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +73,19 @@
 		642C9DF61D0B0E6B00241CF4 /* DDQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDQRCodeViewController.m; sourceTree = "<group>"; };
 		642C9DF91D0B0E9400241CF4 /* DDPhotoQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPhotoQRCodeViewController.h; sourceTree = "<group>"; };
 		642C9DFA1D0B0E9400241CF4 /* DDPhotoQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPhotoQRCodeViewController.m; sourceTree = "<group>"; };
+		642C9E121D0B175000241CF4 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		642C9E141D0B175000241CF4 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		642C9E151D0B175000241CF4 /* QRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRItem.h; sourceTree = "<group>"; };
+		642C9E161D0B175000241CF4 /* QRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRItem.m; sourceTree = "<group>"; };
+		642C9E171D0B175000241CF4 /* QRMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRMenu.h; sourceTree = "<group>"; };
+		642C9E181D0B175000241CF4 /* QRMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRMenu.m; sourceTree = "<group>"; };
+		642C9E191D0B175000241CF4 /* QRUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRUtil.h; sourceTree = "<group>"; };
+		642C9E1A1D0B175000241CF4 /* QRUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRUtil.m; sourceTree = "<group>"; };
+		642C9E1B1D0B175000241CF4 /* QRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRView.h; sourceTree = "<group>"; };
+		642C9E1C1D0B175000241CF4 /* QRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRView.m; sourceTree = "<group>"; };
+		642C9E241D0B17DD00241CF4 /* qr_scan_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_scan_line@2x.png"; sourceTree = "<group>"; };
+		642C9E251D0B17DD00241CF4 /* QRCode@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "QRCode@2x.jpg"; sourceTree = "<group>"; };
+		642C9E261D0B17DD00241CF4 /* QRView.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRView.PNG; sourceTree = "<group>"; };
 		86841194CD9B237671DAE4CB /* Pods-DDQRCode_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDQRCode_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDQRCode_Example/Pods-DDQRCode_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8A043EAD419DB8942109BC91 /* Pods_DDQRCode_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDQRCode_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +124,8 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				642C9E231D0B17DD00241CF4 /* Resource */,
+				642C9E101D0B175000241CF4 /* DDQRCode */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for DDQRCode */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -208,6 +232,50 @@
 			name = "Read Photo QRCode";
 			sourceTree = "<group>";
 		};
+		642C9E101D0B175000241CF4 /* DDQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				642C9E111D0B175000241CF4 /* Assets */,
+				642C9E131D0B175000241CF4 /* Classes */,
+			);
+			name = DDQRCode;
+			path = ../DDQRCode;
+			sourceTree = "<group>";
+		};
+		642C9E111D0B175000241CF4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				642C9E121D0B175000241CF4 /* .gitkeep */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		642C9E131D0B175000241CF4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				642C9E141D0B175000241CF4 /* .gitkeep */,
+				642C9E151D0B175000241CF4 /* QRItem.h */,
+				642C9E161D0B175000241CF4 /* QRItem.m */,
+				642C9E171D0B175000241CF4 /* QRMenu.h */,
+				642C9E181D0B175000241CF4 /* QRMenu.m */,
+				642C9E191D0B175000241CF4 /* QRUtil.h */,
+				642C9E1A1D0B175000241CF4 /* QRUtil.m */,
+				642C9E1B1D0B175000241CF4 /* QRView.h */,
+				642C9E1C1D0B175000241CF4 /* QRView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		642C9E231D0B17DD00241CF4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				642C9E241D0B17DD00241CF4 /* qr_scan_line@2x.png */,
+				642C9E251D0B17DD00241CF4 /* QRCode@2x.jpg */,
+				642C9E261D0B17DD00241CF4 /* QRView.PNG */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		A9B453CF4F1E8947854B64B7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,9 +370,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642C9E271D0B17DD00241CF4 /* qr_scan_line@2x.png in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				642C9E291D0B17DD00241CF4 /* QRView.PNG in Resources */,
+				642C9E1E1D0B175000241CF4 /* .gitkeep in Resources */,
+				642C9E281D0B17DD00241CF4 /* QRCode@2x.jpg in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				642C9E1D1D0B175000241CF4 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +491,11 @@
 			files = (
 				642C9DF71D0B0E6B00241CF4 /* DDQRCodeViewController.m in Sources */,
 				642C9DFB1D0B0E9400241CF4 /* DDPhotoQRCodeViewController.m in Sources */,
+				642C9E221D0B175000241CF4 /* QRView.m in Sources */,
+				642C9E201D0B175000241CF4 /* QRMenu.m in Sources */,
 				6003F59E195388D20070C39A /* DDAppDelegate.m in Sources */,
+				642C9E211D0B175000241CF4 /* QRUtil.m in Sources */,
+				642C9E1F1D0B175000241CF4 /* QRItem.m in Sources */,
 				6003F5A7195388D20070C39A /* DDViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -541,9 +618,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DDQRCode/DDQRCode-Prefix.pch";
 				INFOPLIST_FILE = "DDQRCode/DDQRCode-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -557,9 +636,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DDQRCode/DDQRCode-Prefix.pch";
 				INFOPLIST_FILE = "DDQRCode/DDQRCode-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -584,6 +665,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DDQRCode_Example.app/DDQRCode_Example";
@@ -604,6 +686,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DDQRCode_Example.app/DDQRCode_Example";

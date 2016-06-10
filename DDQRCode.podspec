@@ -36,7 +36,7 @@ TODO: Add long description of the pod here.
   #   'DDQRCode' => ['DDQRCode/Assets/*.png']
   # }
 
-  s.public_header_files = 'Pod/Classes/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.public_header_files = 'DDQRCode/Classes/*.h'
+  s.frameworks = 'UIKit', 'AVFoundation'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

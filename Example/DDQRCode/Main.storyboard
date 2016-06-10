@@ -20,10 +20,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1N-Id-4Wc">
                                 <rect key="frame" x="252" y="158" width="99" height="30"/>
                                 <state key="normal" title="Open QRCode"/>
+                                <connections>
+                                    <action selector="openQR:" destination="whP-gf-Uak" eventType="touchUpInside" id="FIk-zt-mRN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtX-ku-mHZ">
                                 <rect key="frame" x="229.5" y="230" width="141" height="30"/>
                                 <state key="normal" title="Read Photo QRCode"/>
+                                <connections>
+                                    <action selector="readPhotoQR:" destination="whP-gf-Uak" eventType="touchUpInside" id="4ry-JP-r1N"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
