@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DDQRCode_Example' do
+  pod 'DDQRCode', :path => '../'
+
+  target 'DDQRCode_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

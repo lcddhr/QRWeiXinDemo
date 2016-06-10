@@ -1,0 +1,6 @@
+framework module DDQRCode {
+  umbrella header "DDQRCode-umbrella.h"
+
+  export *
+  module * { export * }
+}

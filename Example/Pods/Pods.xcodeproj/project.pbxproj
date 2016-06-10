@@ -1,0 +1,705 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DE5DEC0936079DF2EA222B8C2F2F945 /* Pods-DDQRCode_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A843A92316C568E5F2F20598F2F180E6 /* Pods-DDQRCode_Example-dummy.m */; };
+		54CC55CA4B21963514B2165AD17B641D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		56A204DE79210A87AADCFDE939382457 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		642C9E021D0B104F00241CF4 /* QRItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 642C9DFC1D0B104F00241CF4 /* QRItem.h */; };
+		642C9E031D0B104F00241CF4 /* QRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9DFD1D0B104F00241CF4 /* QRItem.m */; };
+		642C9E041D0B104F00241CF4 /* QRMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 642C9DFE1D0B104F00241CF4 /* QRMenu.h */; };
+		642C9E051D0B104F00241CF4 /* QRMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9DFF1D0B104F00241CF4 /* QRMenu.m */; };
+		642C9E061D0B104F00241CF4 /* QRView.h in Headers */ = {isa = PBXBuildFile; fileRef = 642C9E001D0B104F00241CF4 /* QRView.h */; };
+		642C9E071D0B104F00241CF4 /* QRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9E011D0B104F00241CF4 /* QRView.m */; };
+		73DFBE08E0C4BBD88DC6B7B4DF46FA49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		7E30CB396116BE0D344BAC4117A1CC5B /* DDQRCode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF26D42347254B409296FCA707C3C6F8 /* DDQRCode-dummy.m */; };
+		AEDC22A534AC6A40A8B395AAB6AB87F9 /* Pods-DDQRCode_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E1168EB9AA0C43AC94D4E5F8466B07A6 /* Pods-DDQRCode_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C535C80E43731DCFEB21C081CF392CA9 /* DDQRCode-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 754615F8F7B3C821746A44E339C97082 /* DDQRCode-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB8F552B7178ACEB80A248EF5BF1EEF0 /* Pods-DDQRCode_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E772AB3081C9BD742DF48EEE8D47BD /* Pods-DDQRCode_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA929C46E4ED0FC8B67C5BFDD39DEFA8 /* Pods-DDQRCode_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 318DCA05167817B1E0DC15656E8203A9 /* Pods-DDQRCode_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		732CDCD571D2DD526ECE17D7C9E14DA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 006B87A237E91BD8152A6E139E9C6AC8;
+			remoteInfo = DDQRCode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01D6542FC3F9FFB0299A857C36D5D52F /* DDQRCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DDQRCode.xcconfig; sourceTree = "<group>"; };
+		0E0544C9E8887CCC6BC9056B7AC581E8 /* Pods-DDQRCode_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DDQRCode_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1507BEB13CA0D2C009B54D0EDD438B57 /* Pods-DDQRCode_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DDQRCode_Example-frameworks.sh"; sourceTree = "<group>"; };
+		27C4FB028C41ABDF106B92063EA7C865 /* Pods-DDQRCode_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DDQRCode_Tests.modulemap"; sourceTree = "<group>"; };
+		2F460116E33835DF78720E373CE62841 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		318DCA05167817B1E0DC15656E8203A9 /* Pods-DDQRCode_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DDQRCode_Tests-dummy.m"; sourceTree = "<group>"; };
+		354A6C3F191F4D73942DAF8ADA645F65 /* Pods-DDQRCode_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DDQRCode_Example.modulemap"; sourceTree = "<group>"; };
+		35B3BF75F444A2782F91D01F0A586980 /* Pods-DDQRCode_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DDQRCode_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		3E2F7BE4F72D6A2595EF6FEB1FF72452 /* Pods-DDQRCode_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DDQRCode_Tests-resources.sh"; sourceTree = "<group>"; };
+		46BF55B7DFA4B1526521BF639389FF14 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F0CBEBF070EF69B2AD1F1C96C67E813 /* Pods_DDQRCode_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDQRCode_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6165A8208A4A2927B4155085034C9083 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		642C9DFC1D0B104F00241CF4 /* QRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRItem.h; sourceTree = "<group>"; };
+		642C9DFD1D0B104F00241CF4 /* QRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRItem.m; sourceTree = "<group>"; };
+		642C9DFE1D0B104F00241CF4 /* QRMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRMenu.h; sourceTree = "<group>"; };
+		642C9DFF1D0B104F00241CF4 /* QRMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRMenu.m; sourceTree = "<group>"; };
+		642C9E001D0B104F00241CF4 /* QRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRView.h; sourceTree = "<group>"; };
+		642C9E011D0B104F00241CF4 /* QRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRView.m; sourceTree = "<group>"; };
+		65395BCF422B6C5E5F198542D51D2283 /* Pods-DDQRCode_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DDQRCode_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		665BECF0E0CF1EF8A09031DCF2B58765 /* Pods_DDQRCode_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDQRCode_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		754615F8F7B3C821746A44E339C97082 /* DDQRCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DDQRCode-umbrella.h"; sourceTree = "<group>"; };
+		76EF03E2D0E21ECCF618E4C2201F0450 /* Pods-DDQRCode_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDQRCode_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		77D0F8CCFCF8C7E7434B0DB775686B59 /* Pods-DDQRCode_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDQRCode_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A244ECD71AC058C5059A7A5EEAC1C3C /* DDQRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DDQRCode.modulemap; sourceTree = "<group>"; };
+		82CB0C6C27FC4DEDCCD21B675AE42868 /* Pods-DDQRCode_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDQRCode_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8FACB1B4050DC97A922B47E91FF9A09E /* Pods-DDQRCode_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DDQRCode_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A843A92316C568E5F2F20598F2F180E6 /* Pods-DDQRCode_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DDQRCode_Example-dummy.m"; sourceTree = "<group>"; };
+		AEA128918EB41D680DC11B447E48D9C5 /* DDQRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DDQRCode-prefix.pch"; sourceTree = "<group>"; };
+		B7E772AB3081C9BD742DF48EEE8D47BD /* Pods-DDQRCode_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DDQRCode_Tests-umbrella.h"; sourceTree = "<group>"; };
+		BAA3A0365B154DA8C9F1708823B55B72 /* Pods-DDQRCode_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DDQRCode_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CF9E19FBE10A597BA54DA8384ED0304A /* Pods-DDQRCode_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DDQRCode_Example-resources.sh"; sourceTree = "<group>"; };
+		E1168EB9AA0C43AC94D4E5F8466B07A6 /* Pods-DDQRCode_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DDQRCode_Example-umbrella.h"; sourceTree = "<group>"; };
+		E1EC1DBC35CE2FEBC7363FFC24E12734 /* Pods-DDQRCode_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DDQRCode_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EF26D42347254B409296FCA707C3C6F8 /* DDQRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DDQRCode-dummy.m"; sourceTree = "<group>"; };
+		FDCE8A6B36E6765004F203F68408F9D9 /* DDQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DDQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24BF43A649F9BF40689EE7B0E67A8B78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A204DE79210A87AADCFDE939382457 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CED231511DB2B2FBB55969B445898BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54CC55CA4B21963514B2165AD17B641D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E124507AF60D5E32420F82F5D428B1F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73DFBE08E0C4BBD88DC6B7B4DF46FA49 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CC78AB9B797A8B720FE72C4AE8C1FF2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				642C9DFC1D0B104F00241CF4 /* QRItem.h */,
+				642C9DFD1D0B104F00241CF4 /* QRItem.m */,
+				642C9DFE1D0B104F00241CF4 /* QRMenu.h */,
+				642C9DFF1D0B104F00241CF4 /* QRMenu.m */,
+				642C9E001D0B104F00241CF4 /* QRView.h */,
+				642C9E011D0B104F00241CF4 /* QRView.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1FC5C87A7ABF7D993BEA77158D828AF3 /* DDQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				0CC78AB9B797A8B720FE72C4AE8C1FF2 /* Classes */,
+			);
+			path = DDQRCode;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5572B60C1E2EB01B656E2FB66236A69F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A47B7E129FB0B056A5FD464698D164A3 /* DDQRCode */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		595F172BA09330105E0D770676D22017 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDCE8A6B36E6765004F203F68408F9D9 /* DDQRCode.framework */,
+				665BECF0E0CF1EF8A09031DCF2B58765 /* Pods_DDQRCode_Example.framework */,
+				4F0CBEBF070EF69B2AD1F1C96C67E813 /* Pods_DDQRCode_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				5572B60C1E2EB01B656E2FB66236A69F /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				595F172BA09330105E0D770676D22017 /* Products */,
+				CEAC0B067EB3582C8E7E2E76438B400E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A2EA1B37C5AF2193FA0419560753A308 /* Pods-DDQRCode_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6165A8208A4A2927B4155085034C9083 /* Info.plist */,
+				27C4FB028C41ABDF106B92063EA7C865 /* Pods-DDQRCode_Tests.modulemap */,
+				0E0544C9E8887CCC6BC9056B7AC581E8 /* Pods-DDQRCode_Tests-acknowledgements.markdown */,
+				65395BCF422B6C5E5F198542D51D2283 /* Pods-DDQRCode_Tests-acknowledgements.plist */,
+				318DCA05167817B1E0DC15656E8203A9 /* Pods-DDQRCode_Tests-dummy.m */,
+				BAA3A0365B154DA8C9F1708823B55B72 /* Pods-DDQRCode_Tests-frameworks.sh */,
+				3E2F7BE4F72D6A2595EF6FEB1FF72452 /* Pods-DDQRCode_Tests-resources.sh */,
+				B7E772AB3081C9BD742DF48EEE8D47BD /* Pods-DDQRCode_Tests-umbrella.h */,
+				77D0F8CCFCF8C7E7434B0DB775686B59 /* Pods-DDQRCode_Tests.debug.xcconfig */,
+				82CB0C6C27FC4DEDCCD21B675AE42868 /* Pods-DDQRCode_Tests.release.xcconfig */,
+			);
+			name = "Pods-DDQRCode_Tests";
+			path = "Target Support Files/Pods-DDQRCode_Tests";
+			sourceTree = "<group>";
+		};
+		A47B7E129FB0B056A5FD464698D164A3 /* DDQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				1FC5C87A7ABF7D993BEA77158D828AF3 /* DDQRCode */,
+				AE6C30B0C09559544A8202F7ADC3C851 /* Support Files */,
+			);
+			name = DDQRCode;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		AE6C30B0C09559544A8202F7ADC3C851 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A244ECD71AC058C5059A7A5EEAC1C3C /* DDQRCode.modulemap */,
+				01D6542FC3F9FFB0299A857C36D5D52F /* DDQRCode.xcconfig */,
+				EF26D42347254B409296FCA707C3C6F8 /* DDQRCode-dummy.m */,
+				AEA128918EB41D680DC11B447E48D9C5 /* DDQRCode-prefix.pch */,
+				754615F8F7B3C821746A44E339C97082 /* DDQRCode-umbrella.h */,
+				46BF55B7DFA4B1526521BF639389FF14 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/DDQRCode";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3205C2E7C62728DFC42EC1E642E575A /* Pods-DDQRCode_Example */ = {
+			isa = PBXGroup;
+			children = (
+				2F460116E33835DF78720E373CE62841 /* Info.plist */,
+				354A6C3F191F4D73942DAF8ADA645F65 /* Pods-DDQRCode_Example.modulemap */,
+				8FACB1B4050DC97A922B47E91FF9A09E /* Pods-DDQRCode_Example-acknowledgements.markdown */,
+				35B3BF75F444A2782F91D01F0A586980 /* Pods-DDQRCode_Example-acknowledgements.plist */,
+				A843A92316C568E5F2F20598F2F180E6 /* Pods-DDQRCode_Example-dummy.m */,
+				1507BEB13CA0D2C009B54D0EDD438B57 /* Pods-DDQRCode_Example-frameworks.sh */,
+				CF9E19FBE10A597BA54DA8384ED0304A /* Pods-DDQRCode_Example-resources.sh */,
+				E1168EB9AA0C43AC94D4E5F8466B07A6 /* Pods-DDQRCode_Example-umbrella.h */,
+				76EF03E2D0E21ECCF618E4C2201F0450 /* Pods-DDQRCode_Example.debug.xcconfig */,
+				E1EC1DBC35CE2FEBC7363FFC24E12734 /* Pods-DDQRCode_Example.release.xcconfig */,
+			);
+			name = "Pods-DDQRCode_Example";
+			path = "Target Support Files/Pods-DDQRCode_Example";
+			sourceTree = "<group>";
+		};
+		CEAC0B067EB3582C8E7E2E76438B400E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3205C2E7C62728DFC42EC1E642E575A /* Pods-DDQRCode_Example */,
+				A2EA1B37C5AF2193FA0419560753A308 /* Pods-DDQRCode_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3FC0D624A96E28C0F974CC9E44E8CCAA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB8F552B7178ACEB80A248EF5BF1EEF0 /* Pods-DDQRCode_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45DE46D0C01934BF23212923470AA9A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEDC22A534AC6A40A8B395AAB6AB87F9 /* Pods-DDQRCode_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1C204E04374CB83EAD4DBB474E3BC60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				642C9E061D0B104F00241CF4 /* QRView.h in Headers */,
+				642C9E041D0B104F00241CF4 /* QRMenu.h in Headers */,
+				642C9E021D0B104F00241CF4 /* QRItem.h in Headers */,
+				C535C80E43731DCFEB21C081CF392CA9 /* DDQRCode-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		006B87A237E91BD8152A6E139E9C6AC8 /* DDQRCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6868470F349089F0AEAC2A96FB1BED02 /* Build configuration list for PBXNativeTarget "DDQRCode" */;
+			buildPhases = (
+				2A138FF8DF741D428E20F255D8315A2D /* Sources */,
+				E124507AF60D5E32420F82F5D428B1F9 /* Frameworks */,
+				C1C204E04374CB83EAD4DBB474E3BC60 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DDQRCode;
+			productName = DDQRCode;
+			productReference = FDCE8A6B36E6765004F203F68408F9D9 /* DDQRCode.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		78ED5A8CC2DBD4D05541CF4A4C320B4F /* Pods-DDQRCode_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03F17E72A81A0DED90971133B771DFE8 /* Build configuration list for PBXNativeTarget "Pods-DDQRCode_Example" */;
+			buildPhases = (
+				ED8417194CABB8A09E0C8D1AA4CE3295 /* Sources */,
+				24BF43A649F9BF40689EE7B0E67A8B78 /* Frameworks */,
+				45DE46D0C01934BF23212923470AA9A7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F743B93C7EE2398DAE6CFE0089B5043 /* PBXTargetDependency */,
+			);
+			name = "Pods-DDQRCode_Example";
+			productName = "Pods-DDQRCode_Example";
+			productReference = 665BECF0E0CF1EF8A09031DCF2B58765 /* Pods_DDQRCode_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FBF3DD6392B1C8CF2989F25120BF0FAC /* Pods-DDQRCode_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CC2486427B5572478937DBFF50B3530 /* Build configuration list for PBXNativeTarget "Pods-DDQRCode_Tests" */;
+			buildPhases = (
+				78E082CC86B2D03793149BEE8A4A0487 /* Sources */,
+				6CED231511DB2B2FBB55969B445898BF /* Frameworks */,
+				3FC0D624A96E28C0F974CC9E44E8CCAA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-DDQRCode_Tests";
+			productName = "Pods-DDQRCode_Tests";
+			productReference = 4F0CBEBF070EF69B2AD1F1C96C67E813 /* Pods_DDQRCode_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 595F172BA09330105E0D770676D22017 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				006B87A237E91BD8152A6E139E9C6AC8 /* DDQRCode */,
+				78ED5A8CC2DBD4D05541CF4A4C320B4F /* Pods-DDQRCode_Example */,
+				FBF3DD6392B1C8CF2989F25120BF0FAC /* Pods-DDQRCode_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A138FF8DF741D428E20F255D8315A2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E30CB396116BE0D344BAC4117A1CC5B /* DDQRCode-dummy.m in Sources */,
+				642C9E071D0B104F00241CF4 /* QRView.m in Sources */,
+				642C9E051D0B104F00241CF4 /* QRMenu.m in Sources */,
+				642C9E031D0B104F00241CF4 /* QRItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78E082CC86B2D03793149BEE8A4A0487 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA929C46E4ED0FC8B67C5BFDD39DEFA8 /* Pods-DDQRCode_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED8417194CABB8A09E0C8D1AA4CE3295 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DE5DEC0936079DF2EA222B8C2F2F945 /* Pods-DDQRCode_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F743B93C7EE2398DAE6CFE0089B5043 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DDQRCode;
+			target = 006B87A237E91BD8152A6E139E9C6AC8 /* DDQRCode */;
+			targetProxy = 732CDCD571D2DD526ECE17D7C9E14DA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05629B315077D320875F1BBE24250EEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01D6542FC3F9FFB0299A857C36D5D52F /* DDQRCode.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DDQRCode/DDQRCode-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DDQRCode/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DDQRCode/DDQRCode.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DDQRCode;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0C5989B54086A668C5476FD80A68F3A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1EC1DBC35CE2FEBC7363FFC24E12734 /* Pods-DDQRCode_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DDQRCode_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DDQRCode_Example/Pods-DDQRCode_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DDQRCode_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3160EDCA83546DE507D5C99A9833459E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77D0F8CCFCF8C7E7434B0DB775686B59 /* Pods-DDQRCode_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DDQRCode_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DDQRCode_Tests/Pods-DDQRCode_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DDQRCode_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		37F4A1562413E71D1A2CF3F46B17736F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01D6542FC3F9FFB0299A857C36D5D52F /* DDQRCode.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DDQRCode/DDQRCode-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DDQRCode/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DDQRCode/DDQRCode.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DDQRCode;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		936B12211A158F64CDEFBAAB86209379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82CB0C6C27FC4DEDCCD21B675AE42868 /* Pods-DDQRCode_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DDQRCode_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DDQRCode_Tests/Pods-DDQRCode_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DDQRCode_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A9AD93EA82EF5822D5780D93C9857FD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76EF03E2D0E21ECCF618E4C2201F0450 /* Pods-DDQRCode_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DDQRCode_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DDQRCode_Example/Pods-DDQRCode_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DDQRCode_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03F17E72A81A0DED90971133B771DFE8 /* Build configuration list for PBXNativeTarget "Pods-DDQRCode_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9AD93EA82EF5822D5780D93C9857FD2 /* Debug */,
+				0C5989B54086A668C5476FD80A68F3A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
+				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CC2486427B5572478937DBFF50B3530 /* Build configuration list for PBXNativeTarget "Pods-DDQRCode_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3160EDCA83546DE507D5C99A9833459E /* Debug */,
+				936B12211A158F64CDEFBAAB86209379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6868470F349089F0AEAC2A96FB1BED02 /* Build configuration list for PBXNativeTarget "DDQRCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37F4A1562413E71D1A2CF3F46B17736F /* Debug */,
+				05629B315077D320875F1BBE24250EEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
