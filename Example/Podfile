@@ -1,11 +1,16 @@
+
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+inhibit_all_warnings!
+
 use_frameworks!
 
 target 'DDQRCode_Example' do
-  pod 'DDQRCode', :path => '../'
+#  pod 'DDQRCode', :path => '../DDQRCode'
+pod 'DDQRCode', '~> 1.0.0'
 
-  target 'DDQRCode_Tests' do
-    inherit! :search_paths
-
-    
-  end
+#  target 'DDQRCode_Tests' do
+#    inherit! :search_paths
+#
+#  end
 end

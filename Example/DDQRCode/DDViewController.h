@@ -6,8 +6,8 @@
 //  Copyright (c) 2016 lcd. All rights reserved.
 //
 
-@import UIKit;
 
+#import <UIKit/UIKit.h>
 
 
 @interface DDViewController : UIViewController

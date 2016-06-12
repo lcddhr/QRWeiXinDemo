@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		06A210ED926E41A8C914AE50 /* Pods_DDQRCode_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0CF0B025E1229812BFF732 /* Pods_DDQRCode_Example.framework */; };
-		286CDF9D71F1BB56D8ACD90A /* Pods_DDQRCode_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A043EAD419DB8942109BC91 /* Pods_DDQRCode_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -24,12 +23,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		642C9DF71D0B0E6B00241CF4 /* DDQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9DF61D0B0E6B00241CF4 /* DDQRCodeViewController.m */; };
 		642C9DFB1D0B0E9400241CF4 /* DDPhotoQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9DFA1D0B0E9400241CF4 /* DDPhotoQRCodeViewController.m */; };
-		642C9E1D1D0B175000241CF4 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 642C9E121D0B175000241CF4 /* .gitkeep */; };
-		642C9E1E1D0B175000241CF4 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 642C9E141D0B175000241CF4 /* .gitkeep */; };
-		642C9E1F1D0B175000241CF4 /* QRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9E161D0B175000241CF4 /* QRItem.m */; };
-		642C9E201D0B175000241CF4 /* QRMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9E181D0B175000241CF4 /* QRMenu.m */; };
-		642C9E211D0B175000241CF4 /* QRUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9E1A1D0B175000241CF4 /* QRUtil.m */; };
-		642C9E221D0B175000241CF4 /* QRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 642C9E1C1D0B175000241CF4 /* QRView.m */; };
 		642C9E271D0B17DD00241CF4 /* qr_scan_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 642C9E241D0B17DD00241CF4 /* qr_scan_line@2x.png */; };
 		642C9E281D0B17DD00241CF4 /* QRCode@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 642C9E251D0B17DD00241CF4 /* QRCode@2x.jpg */; };
 		642C9E291D0B17DD00241CF4 /* QRView.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 642C9E261D0B17DD00241CF4 /* QRView.PNG */; };
@@ -47,9 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F75021F9B09F14DEA027890 /* DDQRCode.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DDQRCode.podspec; path = ../DDQRCode.podspec; sourceTree = "<group>"; };
-		1DBE9786E5E3A0885797E043 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		28AB4E040FF2C8C31E419B7E /* Pods-DDQRCode_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDQRCode_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDQRCode_Tests/Pods-DDQRCode_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* DDQRCode_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDQRCode_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,24 +63,12 @@
 		642C9DF61D0B0E6B00241CF4 /* DDQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDQRCodeViewController.m; sourceTree = "<group>"; };
 		642C9DF91D0B0E9400241CF4 /* DDPhotoQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPhotoQRCodeViewController.h; sourceTree = "<group>"; };
 		642C9DFA1D0B0E9400241CF4 /* DDPhotoQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPhotoQRCodeViewController.m; sourceTree = "<group>"; };
-		642C9E121D0B175000241CF4 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		642C9E141D0B175000241CF4 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		642C9E151D0B175000241CF4 /* QRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRItem.h; sourceTree = "<group>"; };
-		642C9E161D0B175000241CF4 /* QRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRItem.m; sourceTree = "<group>"; };
-		642C9E171D0B175000241CF4 /* QRMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRMenu.h; sourceTree = "<group>"; };
-		642C9E181D0B175000241CF4 /* QRMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRMenu.m; sourceTree = "<group>"; };
-		642C9E191D0B175000241CF4 /* QRUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRUtil.h; sourceTree = "<group>"; };
-		642C9E1A1D0B175000241CF4 /* QRUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRUtil.m; sourceTree = "<group>"; };
-		642C9E1B1D0B175000241CF4 /* QRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRView.h; sourceTree = "<group>"; };
-		642C9E1C1D0B175000241CF4 /* QRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRView.m; sourceTree = "<group>"; };
 		642C9E241D0B17DD00241CF4 /* qr_scan_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_scan_line@2x.png"; sourceTree = "<group>"; };
 		642C9E251D0B17DD00241CF4 /* QRCode@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "QRCode@2x.jpg"; sourceTree = "<group>"; };
 		642C9E261D0B17DD00241CF4 /* QRView.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRView.PNG; sourceTree = "<group>"; };
 		86841194CD9B237671DAE4CB /* Pods-DDQRCode_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDQRCode_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DDQRCode_Example/Pods-DDQRCode_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8A043EAD419DB8942109BC91 /* Pods_DDQRCode_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDQRCode_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		978504CF0CAF81D7549CC9E1 /* Pods-DDQRCode_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDQRCode_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DDQRCode_Tests/Pods-DDQRCode_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B921D1E6163D876B220F2315 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BB0CF0B025E1229812BFF732 /* Pods_DDQRCode_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DDQRCode_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB999A4A495FDC4BEB656D1D /* Pods-DDQRCode_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDQRCode_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DDQRCode_Example/Pods-DDQRCode_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,7 +92,6 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				286CDF9D71F1BB56D8ACD90A /* Pods_DDQRCode_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				642C9E231D0B17DD00241CF4 /* Resource */,
-				642C9E101D0B175000241CF4 /* DDQRCode */,
-				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for DDQRCode */,
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
@@ -204,16 +179,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				0F75021F9B09F14DEA027890 /* DDQRCode.podspec */,
-				1DBE9786E5E3A0885797E043 /* README.md */,
-				B921D1E6163D876B220F2315 /* LICENSE */,
-			);
-			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
 		642C9DF41D0B0E4600241CF4 /* OpenQRCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,40 +197,6 @@
 			name = "Read Photo QRCode";
 			sourceTree = "<group>";
 		};
-		642C9E101D0B175000241CF4 /* DDQRCode */ = {
-			isa = PBXGroup;
-			children = (
-				642C9E111D0B175000241CF4 /* Assets */,
-				642C9E131D0B175000241CF4 /* Classes */,
-			);
-			name = DDQRCode;
-			path = ../DDQRCode;
-			sourceTree = "<group>";
-		};
-		642C9E111D0B175000241CF4 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				642C9E121D0B175000241CF4 /* .gitkeep */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		642C9E131D0B175000241CF4 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				642C9E141D0B175000241CF4 /* .gitkeep */,
-				642C9E151D0B175000241CF4 /* QRItem.h */,
-				642C9E161D0B175000241CF4 /* QRItem.m */,
-				642C9E171D0B175000241CF4 /* QRMenu.h */,
-				642C9E181D0B175000241CF4 /* QRMenu.m */,
-				642C9E191D0B175000241CF4 /* QRUtil.h */,
-				642C9E1A1D0B175000241CF4 /* QRUtil.m */,
-				642C9E1B1D0B175000241CF4 /* QRView.h */,
-				642C9E1C1D0B175000241CF4 /* QRView.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		642C9E231D0B17DD00241CF4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,8 +212,6 @@
 			children = (
 				86841194CD9B237671DAE4CB /* Pods-DDQRCode_Example.debug.xcconfig */,
 				BB999A4A495FDC4BEB656D1D /* Pods-DDQRCode_Example.release.xcconfig */,
-				28AB4E040FF2C8C31E419B7E /* Pods-DDQRCode_Tests.debug.xcconfig */,
-				978504CF0CAF81D7549CC9E1 /* Pods-DDQRCode_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -374,10 +303,8 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				642C9E291D0B17DD00241CF4 /* QRView.PNG in Resources */,
-				642C9E1E1D0B175000241CF4 /* .gitkeep in Resources */,
 				642C9E281D0B17DD00241CF4 /* QRCode@2x.jpg in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
-				642C9E1D1D0B175000241CF4 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,11 +418,7 @@
 			files = (
 				642C9DF71D0B0E6B00241CF4 /* DDQRCodeViewController.m in Sources */,
 				642C9DFB1D0B0E9400241CF4 /* DDPhotoQRCodeViewController.m in Sources */,
-				642C9E221D0B175000241CF4 /* QRView.m in Sources */,
-				642C9E201D0B175000241CF4 /* QRMenu.m in Sources */,
 				6003F59E195388D20070C39A /* DDAppDelegate.m in Sources */,
-				642C9E211D0B175000241CF4 /* QRUtil.m in Sources */,
-				642C9E1F1D0B175000241CF4 /* QRItem.m in Sources */,
 				6003F5A7195388D20070C39A /* DDViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -624,7 +547,7 @@
 				INFOPLIST_FILE = "DDQRCode/DDQRCode-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lcddhr.DDQRCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -642,7 +565,7 @@
 				INFOPLIST_FILE = "DDQRCode/DDQRCode-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lcddhr.DDQRCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -650,7 +573,6 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28AB4E040FF2C8C31E419B7E /* Pods-DDQRCode_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -675,7 +597,6 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 978504CF0CAF81D7549CC9E1 /* Pods-DDQRCode_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

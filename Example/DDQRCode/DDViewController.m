@@ -18,6 +18,12 @@
 
 @implementation DDViewController
 
+-(void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+}
+
 - (IBAction)openQR:(id)sender {
     
     if ([self validateCamera] && [self canUseCamera]) {
